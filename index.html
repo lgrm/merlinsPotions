@@ -1,10 +1,169 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Merlin's Potions</title>
-        <script type="text/javascript" src="js/main.js"></script>
-        <link href="css/style.css" rel="stylesheet" >
-    </head>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MerlinsPotions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+	<header class="top">
+	    <button id="menuSide">
+		<i class="fas fa-bars fa-2x"></i></button>
+	<div id="topLeft" class="container">
+		<div  class="box-1"><p>Merlin's<span id="titulo2"> Potions </span>
+		<br><span id="subtitulo">fine potions since 2006</span></p></div>
+		<form class="box-2">
+		<i class="fas fa-search fa-lg"></i>
+			<input type="search" placeholder="Search our stock">
+		</form>
+		<div id="topRight" class="box-3">
+			<p id="freeShip">Free shipping<br><span>on orders over $50</span></p>
+			<a><i ><img src="images/icone-carrinho.png" alt="Icone caldeirão carrinho"></i></a>
+			<p>BAG: <span class="preco" id="number">0</span></p>
+		</div>
+		</div>
+
+	</header>
+	<nav id="navMenu">
+		<ul id="sign">
+			<li><a href="">Sign In</a></li>
+			<small>or</small>
+			<li><a href="">Sign Up</a></li>
+		</ul>
+		<ul id="menu">
+			<li><a href="">Potions <i class="fas fa-caret-down"></i></a></li>
+			<li><a href="">Ingredientes </a><i class="fas fa-caret-down"></i></li>
+			<li><a href="">Books </a><i class="fas fa-caret-down"></i></li>
+			<li><a href="">Supplies <i class="fas fa-caret-down"></i></a></li>
+			<li><a href="">Charms <i class="fas fa-caret-down"></i></a></li>
+			<li><a href="">Clearance!</a></li>
+		</ul>
+	</nav>
+	<main id="grid">
+		<p id="itens">Potions</p>
+		<section class="linha">
+			<figure class="thumbnails"><a href="products/aging-potion.png" data-title="1"><img class="potionImg" src="products/aging-potion.png" alt="Aging Potions Image"></a>
+				<figcaption>Aging Potio - <span class="preco"> $29.99</span></figcaption>
+			</figure>
+
+			<figure class="thumbnails"><a href="products/bulgeye-potion.png" data-title="2"><img class="potionImg" src="products/bulgeye-potion.png" alt="Bulgeye Potion Image"></a>
+				<figcaption>Bulgeye Potion - <span class="preco"> $29.99</span></figcaption>
+			</figure>
+
+			<figure class="thumbnails"><a href="products/dragon-tonic.png" data-title="3"><img class="potionImg" src="products/dragon-tonic.png" alt="Dragon Tunic Image"></a>
+				<figcaption>Dragon Tunic - <span class="preco"> $64.99</span></figcaption>
+			</figure>
+		
+			<figure class="thumbnails"><a href="products/love-potion.png" data-title="4"><img class="potionImg" src="products/love-potion.png" alt="Love Potion" ></a>
+				<figcaption>Love Potion - <span class="preco"> $29.99</span></figcaption>
+
+			</figure>
+			<figure class="thumbnails"><a href="products/polyjuice-potion.png" data-title="5"><img class="potionImg" src="products/polyjuice-potion.png" alt="Sleeping Draught Image"></a>
+				<figcaption>Polyjuice Potion - <span class="preco"> $99.99</span></figcaption>
+			</figure>
+
+			<figure class="thumbnails"><a href="products/sleeping-draught.png" data-title="6"><img class="potionImg" src="products/sleeping-draught.png"></a>
+				<figcaption>Sleeping Draught - <span class="preco"> $14.99</span></figcaption>
+			</figure>
+		</section>
+	</main>
+
+	<div class="lightbox" data-state="hidden">
+		<div class="lightbox-container">
+			<div class="lightbox-content">
+				<img class="lightbox-img" alt="">
+			</div>
+
+			<article id='info'>
+			<h2 id="nameProd"></h2>
+			<h2>Use Efect :</h2>
+			<p id="efectProd"></p><br>
+			<h2>Ingredients :</h2>
+			<p id="ingr"></p>
+			<br>
+			<h2>Price</h2>
+			<p id="preco"></p><br>
+			<input id="btnAdd" type="submit" value="ADD TO CART">
+			<input id="btnRemove" type="submit" value="REMOVE FROM CART">
+			</article>
+
+			<button class="btn-close">X</button>
+		</div>
+	</div>
+	<footer>
+            <div class="bloco-contato">
+                <div class="bloco-paginas">
+                    <ul>
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">SHIPPING</a></li>
+                        <li><a href="#">RETURNS</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                    </ul>
+                </div>
+                <div class="bloco-redes">
+                    <ul>
+                        <li><a href="#" class="rd-facebook"></a></li>
+                        <li><a href="#" class="rd-twitter"></a></li>
+                        <li><a href="#" class="rd-pinterest"></a></li>
+                        <li><a href="#" class="rd-tumblr"></a></li>
+                        <li><a href="#" class="rd-google"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-newsletter">
+                <div class="bloco-newsletter">
+                    <h3>Sign up for our Newsletter</h3>
+                    <p>Sign up for our newsletter & get exclusive discounts</p>
+                    <form action="#">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <input type="submit" name="submit" value="SUBMIT">
+                    </form>
+                </div>                
+            </div>
+            <div class="bloco-creditos">
+                <span>&#169; 2015 Merlin's Potions. All Rights Reserved</span>
+            </div>
+        </footer>
+        <!--
+	<footer>
+		<div id="contatos">
+			<ul id="links">
+				<li><a href="">COMPANY</a></li>
+				<li><a href="">CONTACT US</a></li>
+				<li><a href="">SHIPPING</a></li>
+				<li><a href="">RETURNS</a></li>
+				<li><a href="">CAREERS</a></li>
+			</ul>
+			<ul id="medias">
+				<li class="fa-stack fa-2x"><a href=""><i class="fa fa-circle fa-stack-1x icon-background1"></i><i class=" fab fa-facebook-f fa-xs fa-stack-1x" data-fa-mask="fab fa-circ"></i></a></li>
+				<li class="fa-stack fa-2x"><a href=""><i class="fa fa-circle fa-stack-1x icon-background1"></i><i class=" fab fa-twitter fa-xs fa-stack-1x" data-fa-mask="fab fa-circ"></i></a></li>
+
+				<li class="fa-stack fa-2x"><a href=""><i class="fa fa-circle fa-stack-1x icon-background1"></i><i class=" fab fa-pinterest-p fa-xs fa-stack-1x" data-fa-mask="fab fa-circ"></i></a></li>
+
+				<li class="fa-stack fa-2x"><a href=""><i class="fa fa-circle fa-stack-1x icon-background1"></i><i class=" fab fa-tumblr fa-xs fa-stack-1x" data-fa-mask="fab fa-circ"></i></a></li>
+
+
+				<li class="fa-stack fa-2x"><a href=""><i class="fa fa-circle fa-stack-1x icon-background1"></i><i class=" fab fa-google-plus-g fa-xs fa-stack-1x" data-fa-mask="fab fa-circ"></i></a></li>
+
+			</ul>
+			<p><small> &copy; 2015 Merllin's Potions All Rights Reserved</small></p>
+		</div>
+		<aside>
+		<div>
+			<p>Sign up for our Newsletter</p>
+			<p>Sign up for our newsletter &amp; get exclusive discounts</p>
+			<form>
+				<input type="email" name="email" placeholder="Enter your email">
+				<input type="submit" value="SUBMIT">
+			</form>
+			</div>
+		</aside>
+	</footer>-->
+	<script src="js/script.js"></script>
+</body>
 </html>
